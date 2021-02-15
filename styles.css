@@ -90,3 +90,16 @@ li {
     border: solid 1px;
     padding: 1rem 1.5rem;
 }
+
+.data {
+    font-size: 1.6rem;
+}
+
+.data div {
+    background-color: moccasin;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    margin: 3rem;
+}
