@@ -1,0 +1,92 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    background-color: lightslategray;
+}
+
+body {
+    padding: 2rem;
+    background-color: skyblue;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1516398810565-0cb4310bb8ea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2602&q=80);
+    margin: auto;
+    margin-bottom: 3rem;
+    width: 50rem;
+    height: 50rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+}
+
+.logo p {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+    font-size: 2.6rem;
+    color: antiquewhite;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-size: 2.6rem;
+}
+
+input[type='number'] {
+    font-family: inherit;
+    background-color: rgba(133, 114, 74, 0.527);
+    width: 40%;
+    margin: 1rem 0;
+    padding: 0.9rem 0;
+    border: none;
+    border-radius: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    color: lawngreen;
+}
+
+button {
+    font-family: inherit;
+    border: solid 1px rgb(253, 234, 125);
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bolder;
+    width: 7rem;
+    height: 7rem;
+    background-color: rgb(0, 204, 255);
+    color: purple;
+    margin: 2rem;
+}
+
+.entriesWrapper {
+    padding: 1rem 0;
+    font-size: 1, 6rem;
+    margin: 0 10rem;
+}
+
+.entriesWrapper h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding: 3rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: solid 1px;
+    padding: 1rem 1.5rem;
+}
