@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Tracker</title>
+</head>
+
+<body>
+    <main>
+        <div class="logo"></div>
+
+        <form>
+            <label for="numberInput">Number of miles today</label>
+            <br>
+            <input type="number" id="numberInput" step="0.1">
+            <br>
+            <button type="submit">Add</button>
+        </form>
+
+        <hr>
+
+        <section class="entriesWrapper">
+            <h3>Last 7 days</h3>
+
+            <ul id="entries">
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+            </ul>
+
+        </section>
+
+        <section class="data">
+            <div>
+                <p>Total:</p>
+                <span id="total">0</span>
+            </div>
+
+            <div>
+                <p>Average distance:</p>
+                <span id="average">0</span>
+            </div>
+
+            <div>
+                <p>This week's high:</p>
+                <span id="high">0</span>
+            </div>
+        </section>
+
+        <section class="progress">
+            <h3>
+                Weekly target: <span id="progressTotal">0</span>/
+                <span id="target">25</span>miles
+            </h3>
+            <div class="progressCircleWrapper">
+                <!-- todo -->
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+</body>
+
+</html>
