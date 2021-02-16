@@ -1,25 +1,22 @@
 html {
     font-family: 'Times New Roman', Times, serif;
     font-size: 10px;
-    background-color: lightslategray;
 }
 
 body {
-    padding: 2rem;
     background-image: url(https://images.unsplash.com/photo-1603489556890-817b0154eb64?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=672&q=80);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 80%;
-    margin: 0 auto;
+    padding: 4rem 10rem;
 }
 
 .logo {
     position: relative;
     background-image: url(https://images.unsplash.com/photo-1516398810565-0cb4310bb8ea?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2602&q=80);
-    margin: auto;
+    margin: 0;
     margin-bottom: 3rem;
-    width: 50rem;
-    height: 50rem;
+    width: 100%;
+    height: 80rem;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1rem;
@@ -28,8 +25,8 @@ body {
 
 .logo p {
     position: absolute;
-    top: 80%;
-    left: 33%;
+    top: 90%;
+    left: 39%;
     font-size: 2.6rem;
     color: antiquewhite;
 }
@@ -90,7 +87,7 @@ button {
 .entriesWrapper {
     padding: 1rem 0;
     font-size: 3rem;
-    margin: 0 10rem;
+    margin: 0 5rem;
 }
 
 .entriesWrapper h3 {
@@ -134,4 +131,111 @@ li {
     margin: 2rem;
     box-shadow: inset 2px 2px 7px;
     border-radius: 1rem;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+    }
+    .logo {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        margin-bottom: 1rem;
+    }
+    .logo p {
+        position: absolute;
+        top: 87%;
+        left: 35%;
+        font-size: 1.6rem;
+        color: antiquewhite;
+    }
+    label {
+        font-size: 1.6rem;
+    }
+    input[type='number'] {
+        font-family: inherit;
+        background-color: rgba(0, 0, 0, 0.87);
+        width: 33%;
+        margin: 0.3rem 0;
+        padding: 0.9rem 0;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        color: lawngreen;
+    }
+    button {
+        font-family: inherit;
+        border: solid 1px rgb(217, 125, 253);
+        border-radius: 50%;
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 3.9rem;
+        height: 3.9rem;
+        background-color: rgb(0, 204, 255);
+        color: purple;
+        margin: 1rem;
+        box-shadow: inset 2px 2px 7px;
+    }
+    hr {
+        border: none;
+        border-top: 6px double #333;
+        color: #333;
+        overflow: visible;
+        text-align: center;
+        height: 5px;
+        margin-top: 4rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    hr:after {
+        content: ' 🏃🏽‍♂️ 🏃🏾‍♀️ 🏃🏽‍♂️ 🏃🏿  🏃🏽‍  🏃🏼‍♂️ 🏃🏼‍♀️';
+        position: relative;
+        top: -35px;
+        font-size: 3rem;
+    }
+    .entriesWrapper {
+        padding: 0.3rem 0;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .entriesWrapper h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: lighter;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    li {
+        border: solid 1px;
+        padding: 1rem 1.5rem;
+        background-color: black;
+        color: aliceblue;
+        box-shadow: inset 2px 2px 7px black;
+        border-radius: 1rem;
+        max-width: fit-content;
+    }
+    .data {
+        font-size: 1rem;
+        box-shadow: inset 2px 2px 7px;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .data div {
+        background-color: moccasin;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        margin: 1rem;
+        box-shadow: inset 2px 2px 7px;
+        border-radius: 1rem;
+    }
 }
