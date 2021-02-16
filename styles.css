@@ -23,6 +23,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1rem;
+    box-shadow: inset 6px 6px 9px;
 }
 
 .logo p {
@@ -31,6 +32,24 @@ body {
     left: 33%;
     font-size: 2.6rem;
     color: antiquewhite;
+}
+
+hr {
+    border: none;
+    border-top: 6px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    padding-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+hr:after {
+    content: ' 🏃🏽‍♂️ 🏃🏾‍♀️ 🏃🏽‍♂️ 🏃🏿  🏃🏽‍  🏃🏼‍♂️ 🏃🏼‍♀️';
+    position: relative;
+    top: -55px;
+    font-size: 5rem;
 }
 
 form {
@@ -43,7 +62,7 @@ label {
 
 input[type='number'] {
     font-family: inherit;
-    background-color: rgba(133, 114, 74, 0.527);
+    background-color: rgba(0, 0, 0, 0.87);
     width: 40%;
     margin: 1rem 0;
     padding: 0.9rem 0;
@@ -65,20 +84,21 @@ button {
     background-color: rgb(0, 204, 255);
     color: purple;
     margin: 2rem;
+    box-shadow: inset 2px 2px 7px;
 }
 
 .entriesWrapper {
     padding: 1rem 0;
-    font-size: 1, 6rem;
+    font-size: 3rem;
     margin: 0 10rem;
 }
 
 .entriesWrapper h3 {
     margin: 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: lighter;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 ul {
@@ -86,15 +106,23 @@ ul {
     justify-content: space-between;
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 li {
     border: solid 1px;
     padding: 1rem 1.5rem;
+    background-color: black;
+    color: aliceblue;
+    box-shadow: inset 2px 2px 7px black;
+    border-radius: 1rem;
 }
 
 .data {
     font-size: 1.6rem;
+    box-shadow: inset 2px 2px 7px;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .data div {
@@ -103,5 +131,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 3rem;
-    margin: 3rem;
+    margin: 2rem;
+    box-shadow: inset 2px 2px 7px;
+    border-radius: 1rem;
 }
