@@ -47,7 +47,7 @@
             </div>
 
             <div>
-                <p>Average distance:</p>
+                <p>Daily average distance:</p>
                 <span id="average">0</span>
             </div>
 
@@ -57,13 +57,31 @@
             </div>
         </section>
 
+
         <section class="progress">
+
+
+
             <h3>
                 Weekly target: <span id="progressTotal">0</span>/
-                <span id="target">25</span>miles
+                <span id="target">0</span>miles
             </h3>
+
             <div class="progressCircleWrapper">
-                <!-- todo -->
+                <div id="progressCircle">
+                    <div id="progressCenter">
+
+                        <form id="secondForm">
+                            <label for="userWeeklyTarget">Set a Running target</label>
+                            <br>
+                            <input type="number" id="userWeeklyTarget" step="0.1">
+                            <br>
+                            <button type="submit">Add</button>
+                        </form>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 

@@ -27,6 +27,22 @@ function calculateAverage() {
 	document.getElementById('average').innerText = average;
 }
 
+function weeklyHigh() {
+	const high = Math.max(...userEntries);
+	document.getElementById('high').innerText = high;
+}
+
+function calculateGoal() {
+	const totalValue = userEntries.reduce(reducer).toFixed(1);
+	const completedPercent = totalValue / (weeklyGoal / 100);
+	const progressCircle = document.querySelector('#progressCircle ');
+	if (completedPercent > 100) {
+		alert(`Well done you have achieved your weekly goal!`);
+		return completedPercent === 100;
+	}
+	progressCircle.style.background = `conic-gradient(#70d ${completedPercent}%, rgba(133, 132, 132, 0.233) ${completedPercent}% 100%)`;
+}
+
 function handleSubmit(event) {
 	event.preventDefault();
 	const entry = Number(document.querySelector('#numberInput').value);
@@ -38,6 +54,40 @@ function handleSubmit(event) {
 	addNewEntry(entry);
 	calculateTotal(userEntries);
 	calculateAverage(userEntries);
+	weeklyHigh(userEntries);
+	calculateGoal(userEntries);
 }
 
 const form = document.querySelector('form').addEventListener('submit', handleSubmit);
+
+// form input value for weekly target
+
+const weeklyGoal = 30;
+
+function addWeeklyTotal() {
+	document.querySelector('#target').innerText = weeklyGoal;
+}
+function handleWeeklyTarget(event) {
+	event.preventDefault();
+	const userWeeklyTarget = Number(document.querySelector('#userWeeklyTarget').value);
+	if (!userWeeklyTarget) {
+		return;
+	}
+	document.querySelector('#secondForm').reset();
+}
+const secondForm = document.querySelector('#secondForm').addEventListener('submit', handleWeeklyTarget);
+
+// function addWeeklyTotal(userWeeklyTarget) {
+// 	console.log(userWeeklyTarget);
+// 	document.querySelector('#target').innerText = userWeeklyTarget;
+// }
+// function handleWeeklyTarget(event) {
+// 	event.preventDefault();
+// 	const userWeeklyTarget = Number(document.querySelector('#userWeeklyTarget').value);
+// 	if (!userWeeklyTarget) {
+// 		return;
+// 	}
+// 	document.querySelector('#secondForm').reset();
+// 	addWeeklyTotal(userWeeklyTarget);
+// }
+// const secondForm = document.querySelector('#secondForm').addEventListener('submit', handleWeeklyTarget);

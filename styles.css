@@ -54,7 +54,11 @@ form {
 }
 
 label {
+    color: rgb(255, 255, 255);
     font-size: 2.6rem;
+    background-color: purple;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 input[type='number'] {
@@ -72,7 +76,7 @@ input[type='number'] {
 
 button {
     font-family: inherit;
-    border: solid 1px rgb(253, 234, 125);
+    border: solid 3px purple;
     border-radius: 50%;
     font-size: 2rem;
     font-weight: bolder;
@@ -81,7 +85,6 @@ button {
     background-color: rgb(0, 204, 255);
     color: purple;
     margin: 2rem;
-    box-shadow: inset 2px 2px 7px;
 }
 
 .entriesWrapper {
@@ -92,10 +95,12 @@ button {
 
 .entriesWrapper h3 {
     margin: 0;
+    color: purple;
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: lighter;
-    padding: 1rem;
+    background-color: aliceblue;
+    border-radius: 2rem;
 }
 
 ul {
@@ -113,6 +118,7 @@ li {
     color: aliceblue;
     box-shadow: inset 2px 2px 7px black;
     border-radius: 1rem;
+    margin-bottom: 4rem;
 }
 
 .data {
@@ -132,6 +138,80 @@ li {
     box-shadow: inset 2px 2px 7px;
     border-radius: 1rem;
 }
+
+/* progress wheel  */
+
+.progress {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.progress h3 {
+    text-align: center;
+    font-size: 5rem;
+    padding: 1rem 0;
+    font-weight: lighter;
+    color: purple;
+    background-color: aliceblue;
+    border-radius: 2rem;
+}
+
+.progress form {
+    margin-top: 9rem;
+}
+
+.progress label {
+    color: white;
+    font-size: 2rem;
+    background-color: purple;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.progress input[type='number'] {
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    margin: 1.9rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(10, 10, 10);
+}
+
+.progressCircleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#progressCircle {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    /* background: conic-gradient(#70d 70%, rgba(133, 132, 132, 0.233) 50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 2px 2px 7px;
+    border: solid 1px white;
+}
+
+#progressCenter {
+    width: 45rem;
+    height: 45rem;
+    border-radius: 50%;
+    background-color: black;
+    border: dotted 2px rgb(255, 251, 251);
+    box-shadow: inset 2px 2px 7px;
+}
+
+/*  */
+
+/* ####################### Media Queries! */
+
+/*  */
 
 @media (max-width: 700px) {
     body {
@@ -237,5 +317,54 @@ li {
         margin: 1rem;
         box-shadow: inset 2px 2px 7px;
         border-radius: 1rem;
+    }
+    .progress h3 {
+        font-size: 1.6rem;
+        font-weight: lighter;
+    }
+    .progress form {
+        margin-top: 9rem;
+    }
+    .progress label {
+        color: white;
+        font-size: 1rem;
+        background-color: purple;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    .progress input[type='number'] {
+        font-family: inherit;
+        background-color: rgb(255, 255, 255);
+        width: 30%;
+        height: o.3rem;
+        margin: 1rem 0;
+        padding: 0.9rem 0;
+        border: none;
+        border-radius: 1rem;
+        font-size: 0.4rem;
+        text-align: center;
+        color: rgb(10, 10, 10);
+    }
+    .progressCircleWrapper {
+        display: flex;
+        justify-content: center;
+    }
+    #progressCircle {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        /* background: conic-gradient(#70d 70%, rgb(95, 95, 95) 50%); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 2px 2px 7px;
+        border: solid 1px white;
+    }
+    #progressCenter {
+        width: 27rem;
+        height: 27rem;
+        border-radius: 50%;
+        background-color: black;
+        box-shadow: inset 2px 2px 7px;
     }
 }
