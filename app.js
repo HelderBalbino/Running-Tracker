@@ -4,11 +4,9 @@ const entriesWrapper = document.querySelector('#entries');
 
 function addNewEntry(newEntry) {
 	entriesWrapper.removeChild(entriesWrapper.firstElementChild);
-
 	const listItem = document.createElement('li');
 	const listValue = document.createTextNode(newEntry.toFixed(1));
 	listItem.appendChild(listValue);
-
 	entriesWrapper.appendChild(listItem);
 }
 
@@ -32,9 +30,10 @@ function weeklyHigh() {
 	document.getElementById('high').innerText = high;
 }
 
+// todo
 function calculateGoal() {
 	const totalValue = userEntries.reduce(reducer).toFixed(1);
-	const completedPercent = totalValue / (weeklyGoal / 100);
+	const completedPercent = totalValue / (10 / 100);
 	const progressCircle = document.querySelector('#progressCircle ');
 	if (completedPercent > 100) {
 		alert(`Well done you have achieved your weekly goal!`);
@@ -42,7 +41,7 @@ function calculateGoal() {
 	}
 	progressCircle.style.background = `conic-gradient(#70d ${completedPercent}%, rgba(133, 132, 132, 0.233) ${completedPercent}% 100%)`;
 }
-
+// first form
 function handleSubmit(event) {
 	event.preventDefault();
 	const entry = Number(document.querySelector('#numberInput').value);
@@ -56,38 +55,26 @@ function handleSubmit(event) {
 	calculateAverage(userEntries);
 	weeklyHigh(userEntries);
 	calculateGoal(userEntries);
+	addWeeklyTotal(userEntries);
 }
 
 const form = document.querySelector('form').addEventListener('submit', handleSubmit);
 
-// form input value for weekly target
+// second form input value for weekly target
 
-const weeklyGoal = 30;
-
-function addWeeklyTotal() {
-	document.querySelector('#target').innerText = weeklyGoal;
+function addWeeklyTotal(userWeeklyTarget1) {
+	console.log(userWeeklyTarget1);
+	document.querySelector('#target').innerText = userWeeklyTarget1;
+	return userWeeklyTarget1;
 }
+
 function handleWeeklyTarget(event) {
 	event.preventDefault();
-	const userWeeklyTarget = Number(document.querySelector('#userWeeklyTarget').value);
-	if (!userWeeklyTarget) {
+	const userWeeklyTarget1 = Number(document.querySelector('#userWeeklyTarget').value);
+	if (!userWeeklyTarget1) {
 		return;
 	}
 	document.querySelector('#secondForm').reset();
+	addWeeklyTotal(userWeeklyTarget1);
 }
 const secondForm = document.querySelector('#secondForm').addEventListener('submit', handleWeeklyTarget);
-
-// function addWeeklyTotal(userWeeklyTarget) {
-// 	console.log(userWeeklyTarget);
-// 	document.querySelector('#target').innerText = userWeeklyTarget;
-// }
-// function handleWeeklyTarget(event) {
-// 	event.preventDefault();
-// 	const userWeeklyTarget = Number(document.querySelector('#userWeeklyTarget').value);
-// 	if (!userWeeklyTarget) {
-// 		return;
-// 	}
-// 	document.querySelector('#secondForm').reset();
-// 	addWeeklyTotal(userWeeklyTarget);
-// }
-// const secondForm = document.querySelector('#secondForm').addEventListener('submit', handleWeeklyTarget);
