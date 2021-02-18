@@ -1,5 +1,5 @@
 let userEntries = [];
-
+let userWeeklyTarget1;
 const entriesWrapper = document.querySelector('#entries');
 
 function addNewEntry(newEntry) {
@@ -34,13 +34,13 @@ function weeklyHigh() {
 function calculateGoal() {
 	const totalValue = userEntries.reduce(reducer).toFixed(1);
 	const completedPercent = totalValue / (userWeeklyTarget1 / 100);
-
+	console.log(typeof userWeeklyTarget1);
 	const progressCircle = document.querySelector('#progressCircle ');
-	if (completedPercent >= 100) {
+	if (completedPercent >= 101) {
 		alert(`Well done you have achieved your weekly goal!`);
-		return completedPercent === 100;
+		return completedPercent === 0;
 	}
-	progressCircle.style.background = `conic-gradient(#70d ${completedPercent}%, rgba(133, 132, 132, 0.233) ${completedPercent}% 100%)`;
+	progressCircle.style.background = `conic-gradient(#80b ${completedPercent}%, rgba(133, 132, 132, 0.233) ${completedPercent}% 100%)`;
 }
 // first form
 function handleSubmit(event) {
@@ -70,7 +70,7 @@ function addWeeklyTotal(userWeeklyTarget1) {
 
 function handleWeeklyTarget(event) {
 	event.preventDefault();
-	const userWeeklyTarget1 = Number(document.querySelector('#userWeeklyTarget').value);
+	userWeeklyTarget1 = Number(document.querySelector('#userWeeklyTarget').value);
 	if (!userWeeklyTarget1) {
 		return;
 	}
