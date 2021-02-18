@@ -33,9 +33,10 @@ function weeklyHigh() {
 // todo
 function calculateGoal() {
 	const totalValue = userEntries.reduce(reducer).toFixed(1);
-	const completedPercent = totalValue / (10 / 100);
+	const completedPercent = totalValue / (userWeeklyTarget1 / 100);
+
 	const progressCircle = document.querySelector('#progressCircle ');
-	if (completedPercent > 100) {
+	if (completedPercent >= 100) {
 		alert(`Well done you have achieved your weekly goal!`);
 		return completedPercent === 100;
 	}
@@ -55,7 +56,6 @@ function handleSubmit(event) {
 	calculateAverage(userEntries);
 	weeklyHigh(userEntries);
 	calculateGoal(userEntries);
-	addWeeklyTotal(userEntries);
 }
 
 const form = document.querySelector('form').addEventListener('submit', handleSubmit);
